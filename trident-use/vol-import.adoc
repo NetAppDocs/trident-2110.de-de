@@ -106,7 +106,7 @@ Trident 19.07 und höher verarbeiten den Anhang von PVS und mountet das Volume i
 
 
 
-== importe von ontap-nas und ontap-nas-Flexgroup
+== `ontap-nas` Und `ontap-nas-flexgroup` Importe
 
 Jedes Volume wurde mit erstellt `ontap-nas` Treiber ist ein FlexVol auf dem ONTAP Cluster. Importieren von FlexVols mit dem `ontap-nas` Der Treiber funktioniert genauso. Eine FlexVol, die bereits auf einem ONTAP Cluster vorhanden ist, kann als importiert werden `ontap-nas` PVC: Ebenso können FlexGroup Volumes importiert werden als `ontap-nas-flexgroup` VES.
 
@@ -147,7 +147,7 @@ NOTE: Ein zuvor vorhandener Fehler beim Importieren von Volumes mit benutzerdefi
 
 
 
-== ontap-san Import
+== `ontap-san` Importieren
 
 Astra Trident kann auch ONTAP SAN FlexVols importieren, die eine einzelne LUN enthalten. Dies entspricht dem `ontap-san` Treiber, der für jede PVC und eine LUN innerhalb der FlexVol eine FlexVol erstellt. Sie können das verwenden `tridentctl import` Befehl in gleicher Weise wie in anderen Fällen:
 
@@ -186,7 +186,7 @@ IMPORTANT: Ein ONTAP-Volume muss vom Typ rw sein, um von Astra Trident importier
 
 
 
-== Elementimport
+== `element` Importieren
 
 Mit Trident können Sie NetApp Element Software/NetApp HCI Volumes in Ihr Kubernetes Cluster importieren. Sie brauchen den Namen Ihres Astra Trident Backend, und den eindeutigen Namen des Volumes und der PVC-Datei als Argumente für die `tridentctl import` Befehl.
 
@@ -205,7 +205,7 @@ NOTE: Der Elementtreiber unterstützt doppelte Volume-Namen. Wenn es doppelte Vo
 
 
 
-== import von aws-cvs
+== `aws-cvs` Importieren
 
 
 TIP: Um ein durch die NetApp Cloud Volumes Service in AWS gesicherte Volume zu importieren, muss das Volume anstelle seines Namens anhand seines Volume-Pfads identifiziert werden.
@@ -227,13 +227,13 @@ NOTE: Der Volume-Pfad ist der Teil des Exportpfads des Volumes nach dem :/. Beis
 
 
 
-== gcp-cvs-Import
+== `gcp-cvs` Importieren
 
 Importieren von A `gcp-cvs` Das Volume funktioniert genauso wie beim Importieren eines `aws-cvs` Datenmenge:
 
 
 
-== import von azure-netapp-Files
+== `azure-netapp-files` Importieren
 
 Um einen zu importieren `azure-netapp-files` Datenträger auf dem Back-End aufgerufen `azurenetappfiles_40517` Mit dem Volume-Pfad `importvol1`, Ausführen des folgenden Befehls:
 
